@@ -1,0 +1,20 @@
+{
+  "name": "is-ogrn",
+  "version": "1.0.0",
+  "description": "The OGRN verification algorithm",
+  "author": "Rik Git <r.git@lenta.ru>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index",
+  "keywords": [
+    "ogrn"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RikoGit/is-ogrn"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}
