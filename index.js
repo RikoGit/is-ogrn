@@ -2,13 +2,13 @@
 
 function isOgrn(ogrnNumber){
   console.log('Number = ' + ogrnNumber);
-  var ogrnValue = String(ogrnNumber);
-  var ogrnValueLength = ogrnValue.length;
+  let ogrnValue = String(ogrnNumber);
+  let ogrnValueLength = ogrnValue.length;
 
   if (checkValidate(ogrnValue,ogrnValueLength)) {
-    var ogrnDivisorValue = getDivisor(ogrnValueLength);
-    var ogrnValueLast = ogrnValue.slice(-1);
-    var remainderDivision = ogrnValue.slice(0, -1) % ogrnDivisorValue;
+    let ogrnDivisorValue = getDivisor(ogrnValueLength);
+    let ogrnValueLast = ogrnValue.slice(-1);
+    let remainderDivision = ogrnValue.slice(0, -1) % ogrnDivisorValue;
     if (remainderDivision == ogrnValueLast || remainderDivision == 10 && ogrnValueLast == 0) {
       console.log('Ccorrect number.' + showOgrnType(ogrnValueLength));
     }
@@ -29,7 +29,7 @@ function showErrorMessage(){
 }
 
 function showOgrnType(c){
- var d = c == 13 ? 'OGRNIP' : 'OGRNUL';
+ let d = c == 13 ? 'OGRNIP' : 'OGRNUL';
  return 'This is ' + d + '.';
 }
 
