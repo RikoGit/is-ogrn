@@ -1,5 +1,7 @@
 "use strict";
 
+let ogrnNumber;
+
 function isOgrn(ogrnNumber){
   console.log('Number = ' + ogrnNumber);
   let ogrnValue = String(ogrnNumber);
@@ -29,10 +31,9 @@ function showErrorMessage(){
 }
 
 function showOgrnType(c){
- let d = c == 13 ? 'OGRNIP' : 'OGRNUL';
- return 'This is ' + d + '.';
+ return 'This is ' + (c == 13 ? 'OGRNIP' : 'OGRNUL') + '.';
 }
 
 function getDivisor(i) {
- return divisorValue = i == 15 ? 13 : 11;
+ return i == 15 ? 13 : 11;
 }

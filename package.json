@@ -1,6 +1,6 @@
 {
   "name": "is-ogrn",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "The OGRN verification algorithm",
   "author": "Rik Git <r.git@lenta.ru>",
   "scripts": {
@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^4.17.0"
+    "eslint": "^4.17.0",
+    "eslint-config-defaults": "^9.0.0"
   }
 }
