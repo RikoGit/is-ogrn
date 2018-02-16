@@ -23,15 +23,8 @@ function checkValidate(a,b) {
   else return showErrorMessage();
 }
 
-function showErrorMessage(){
- console.log(`Iincorrect value.`);
- return;
-}
+let showErrorMessage = () => console.log(`Iincorrect value.`);
 
-function showOgrnType(c){
- return `This is ${(c == 13 ? 'OGRNIP' : 'OGRNUL')}.`;
-}
+let showOgrnType = i => `This is ${(i == 13 ? 'OGRNIP' : 'OGRNUL')}.`;
 
-function getDivisor(i) {
- return i == 15 ? 13 : 11;
-}
+let getDivisor = i => i == 15 ? 13 : 11;
