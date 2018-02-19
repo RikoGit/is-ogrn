@@ -8,14 +8,17 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    "import",
-    "react",
-    "jsx-a11y",
+    'import',
+    'react',
+    'jsx-a11y',
   ],
   extends: 'airbnb',
   env: {
     node: true,
     browser: true,
     jest: true,
+  },
+  rules: {
+    'arrow-parens': ['error', 'as-needed']
   },
 };
