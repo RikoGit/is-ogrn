@@ -1,1 +1,1 @@
-export default value => value.trim().replace(/-/g, '');
+export default value => String(value).trim().replace(/-/g, '');
