@@ -10,7 +10,7 @@
     "watch": "BABEL_ENV=production ./node_modules/.bin/babel src --ignore *.spec.js --out-dir lib -w",
     "lint": "./node_modules/.bin/eslint . --ignore-pattern lib",
     "preversion": "npm run lint && npm test",
-    "postversion": "git push --follow-tags && npm publish",
+    "postversion": "git push --follow-tags && npm publish lib",
     "test": "BABEL_ENV=test jest"
   },
   "main": "index",
