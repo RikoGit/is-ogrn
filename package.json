@@ -4,7 +4,7 @@
   "description": "The OGRN verification algorithm",
   "author": "Rik Git <r.git@lenta.ru>",
   "scripts": {
-    "build": "BABEL_ENV=production ./node_modules/.bin/babel src --ignore *.spec.js --out-dir lib",
+    "build": "BABEL_ENV=production ./node_modules/.bin/babel src --ignore '**/tests/**' --out-dir lib",
     "postbuild": "npm run cp:meta",
     "cp:meta": "copyfiles package.json README.md lib",
     "watch": "BABEL_ENV=production ./node_modules/.bin/babel src --ignore *.spec.js --out-dir lib -w",
