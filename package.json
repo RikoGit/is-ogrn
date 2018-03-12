@@ -4,6 +4,10 @@
   "description": "The OGRN verification algorithm",
   "author": "Rik Git <r.git@lenta.ru>",
   "scripts": {
+    "build": "BABEL_ENV=production ./node_modules/.bin/babel src --ignore *.spec.js --out-dir lib",
+    "postbuild": "npm run cp:meta",
+    "cp:meta": "copyfiles package.json README.md lib",
+    "watch": "BABEL_ENV=production ./node_modules/.bin/babel src --ignore *.spec.js --out-dir lib -w",
     "lint": "./node_modules/.bin/eslint .",
     "preversion": "npm run lint && npm test",
     "postversion": "git push --follow-tags && npm publish",
@@ -29,6 +33,7 @@
     "babel-jest": "^22.4.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "copyfiles": "^2.0.0",
     "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-defaults": "^9.0.0",

@@ -4,7 +4,6 @@ import toOgrn from './toOgrn';
 import getDivisor from './getDivisor';
 import checkLength from './checkLength';
 
-
 export default value => {
   const ogrn = toOgrn(value);
 
