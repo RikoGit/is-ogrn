@@ -1,4 +1,4 @@
-import getDivisor from './getDivisor';
+import getDivisor from '../getDivisor';
 
 it('return 13 of 304500116000221', () => {
   expect(getDivisor('304500116000221')).toBe(13);

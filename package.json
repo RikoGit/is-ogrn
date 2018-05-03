@@ -4,13 +4,15 @@
   "description": "The OGRN verification algorithm",
   "author": "Rik Git <r.git@lenta.ru>",
   "scripts": {
-    "build": "BABEL_ENV=production ./node_modules/.bin/babel src --ignore *.spec.js --out-dir lib",
-    "watch": "BABEL_ENV=production ./node_modules/.bin/babel src --ignore *.spec.js --out-dir lib -w",
+    "build": "BABEL_ENV=production babel src --ignore spec --out-dir lib",
+    "watch": "BABEL_ENV=production babel src --ignore spec --out-dir lib -w",
     "postbuild": "npm run cp:meta",
-    "cp:meta": "copyfiles package.json README.md lib",
-    "lint": "./node_modules/.bin/eslint . --ignore-pattern lib",
-    "preversion": "npm run lint && npm test",
+    "cp:meta": "copyfiles package.json README.md LICENSE lib",
+    "lint": "eslint . --ignore-pattern lib",
+    "precommit": "npm run check",
+    "preversion": "npm run check && npm run build",
     "postversion": "git push --follow-tags && npm publish lib",
+    "check": "npm run lint && npm test",
     "test": "BABEL_ENV=test jest"
   },
   "main": "index",
@@ -40,6 +42,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
+    "husky": "^0.14.3",
     "jest": "^22.4.2",
     "regenerator-runtime": "^0.11.1"
   }

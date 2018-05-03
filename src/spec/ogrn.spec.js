@@ -1,4 +1,4 @@
-import ogrn from './ogrn';
+import ogrn from '../ogrn';
 
 it('return true for correct OGRN', () => {
   expect(ogrn('1177746126040')).toBe(true);
